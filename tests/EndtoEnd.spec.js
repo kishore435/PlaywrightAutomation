@@ -1,6 +1,6 @@
 const {test,expect} = require('@playwright/test');
 
-test('Add Product to Cart Test',async ({page})=>
+test.only('Add Product to Cart Test',async ({page})=>
     {
         const userName = page.locator('#username');
         const password = page.locator('#password');

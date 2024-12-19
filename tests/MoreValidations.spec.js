@@ -16,7 +16,7 @@ test("Popup Validations", async({page})=>
 });
 
 
-test.only("Handling pop-up", async ({page}) =>
+test("Handling pop-up", async ({page}) =>
 {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
     /* await page.locator("#confirmbtn").click();
