@@ -24,7 +24,7 @@
 
     }
     //exceltest("KIWI",350,{rowChange:0,colChange:2},"C://Users//Mobile Programming//Downloads//excelDemo.xlsx");
-    test.only('Upload download excel vaidations', async ({ page }) => {
+    test('Upload download excel vaidations', async ({ page }) => {
 
         const textSearch ='Mango';
         const updateValue = 'KISHORE';

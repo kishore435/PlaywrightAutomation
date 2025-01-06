@@ -1,12 +1,13 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect, chromium } = require('@playwright/test');
 
 const { POManager } = require('../../pageobjects/POManager');
 const dataSet = JSON.parse(JSON.stringify((require("../../utils/PlaceOrderTestData.json"))));
 
 for(const data of dataSet)
 {
-test(`Add Product to Cart Test for ${data.productName}`, async ({ page }) => {
-
+test(`@endtoend Add Product to Cart Test for ${data.productName}`, async ({}) => {
+    const browser = await chromium.launch({ headless: false });  // Launch in headed mode
+    const page = await browser.newPage();
     const poManager = new POManager(page);
     /* const productName = "ZARA COAT 3";
     const userName = "kishorekumarr105@gmail.com";
@@ -32,5 +33,6 @@ test(`Add Product to Cart Test for ${data.productName}`, async ({ page }) => {
     const ordersHistoryPage = poManager.getOrdersHistoryPage();
     await ordersHistoryPage.searchOrderAndSelect(orderId);
     expect(orderId.includes(await ordersHistoryPage.getOrderId())).toBeTruthy();
+    await browser.close();
 
 })};

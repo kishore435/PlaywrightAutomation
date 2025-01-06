@@ -1,6 +1,6 @@
 const { test,request } = require('@playwright/test');
 
-test.only('New API Request',async () => {
+test('New API Request',async () => {
   // Create a new APIRequestContext
   const apiContext = await request.newContext();
 
