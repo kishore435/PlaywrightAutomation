@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-const { POManager } = require('../pageobjects/POManager');
+const { POManager } = require('../../pageobjects/POManager');
 
 
 test('Add Product to Cart Test', async ({ page }) => {
