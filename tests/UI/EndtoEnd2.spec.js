@@ -24,7 +24,7 @@ test('Add Product to Cart Test',async ({page})=>
         await page.getByRole("listitem").getByRole('button',{name:"Cart"}).click();
 
 
-       await page.locator("div li").first().waitFor();//wait until items added to cart are shown in cart page
+       await page.locator("div li").last().waitFor();//wait until items added to cart are shown in cart page
         
         await expect(page.getByText("ZARA COAT 3")).toBeVisible();
 

@@ -31,7 +31,8 @@ module.exports = defineConfig({
     //trace: 'on-first-retry',
     headless : false,
     trace:'on',
-    screenshot:'on'    
+    screenshot:'on',
+    //viewport : {width:720,height:720}  
 
   },
 
@@ -39,9 +40,8 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-     
-      
+      use: { ...devices['Desktop Chrome'],
+        viewport : {width:1536,height:864}   },     
       
     },
    

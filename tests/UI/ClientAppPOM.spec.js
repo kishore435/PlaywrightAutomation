@@ -60,7 +60,7 @@ test('Registration Test',async ({page})=>
                 const str = text.split("@");
                 const domain = str[1].split(" ")[0];
                 console.log(domain);
-                await page.locator("#username").fill(dmain);
+                await page.locator("#username").fill(domain);
                 //await page.pause();
 
             });
