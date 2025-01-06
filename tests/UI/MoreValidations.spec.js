@@ -1,7 +1,7 @@
 const {test,expect} = require('@playwright/test');
 
 
-test("Popup Validations", async({page})=>
+test("@smoke Popup Validations", async({page})=>
 {
  await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
  /* await page.goto("https://www.google.com/");
@@ -16,7 +16,7 @@ test("Popup Validations", async({page})=>
 });
 
 
-test("Handling pop-up", async ({page}) =>
+test("@smoke Handling pop-up", async ({page}) =>
 {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
     /* await page.locator("#confirmbtn").click();
