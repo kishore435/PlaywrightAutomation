@@ -6,7 +6,7 @@ const { POManager } = require('../../pageobjects/POManager');
 test('Add Product to Cart Test', async ({ page }) => {
 
     const poManager = new POManager(page);
-    const productName = "ZARA COAT 3";
+    const productName = "qwerty";
     const userName = "kishorekumarr105@gmail.com";
     const password = "1028Rahul#";
 
