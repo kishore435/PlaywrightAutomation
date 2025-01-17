@@ -11,7 +11,7 @@ test('playwright special locators',async ({page})=>
         await expect(page.getByText(" The Form has been submitted successfully!.").isVisible()).toBeTruthy();
         await page.getByRole('link',{name:'Shop'}).click();
         await page.locator("app-card").filter({hasText:"Nokia Edge"}).getByRole("button").click();
-        await page.goto();
+        await page.goto("kishorekumar");
         await page.pause();
         await page.pause();
 
