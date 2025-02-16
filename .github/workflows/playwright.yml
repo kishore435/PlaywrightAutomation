@@ -4,21 +4,42 @@ on:
     branches: [Develop]
   pull_request:
     branches: [Develop]
+  workflow_dispatch:
+    inputs:
+      test_type:
+        description: "Select which tests to run"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - all
+          - e2e
+
 jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+
     - name: Install dependencies
       run: npm ci
+
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test tests/UI/EndtoEndpomjson.spec.js
+
+    - name: Run Selected Playwright Tests
+      run: |
+        if [ "${{ github.event.inputs.test_type }}" == "e2e" ]; then
+          npx playwright test tests/UI/EndtoEndpomjson.spec.js
+        else
+          npx playwright test
+        fi
+
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
