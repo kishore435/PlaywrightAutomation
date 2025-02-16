@@ -4,7 +4,7 @@ on:
     branches: [Develop]
   pull_request:
     branches: [Develop]
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual execution with a dropdown
     inputs:
       test_type:
         description: "Select which tests to run"
@@ -34,9 +34,11 @@ jobs:
 
     - name: Run Selected Playwright Tests
       run: |
-        if [ "${{ github.event.inputs.test_type }}" == "e2e" ]; then
+        if [[ "${{ github.event.inputs.test_type }}" == "e2e" ]]; then
+          echo "Running End-to-End test..."
           npx playwright test tests/UI/EndtoEndpomjson.spec.js
         else
+          echo "Running all tests..."
           npx playwright test
         fi
 
