@@ -6,7 +6,7 @@ const dataSet = JSON.parse(JSON.stringify((require("../../utils/PlaceOrderTestDa
 for(const data of dataSet)
 {
 test(`@endtoend Add Product to Cart Test for ${data.productName}`, async ({}) => {
-    const browser = await chromium.launch({ headless: false });  // Launch in headed mode
+    const browser = await chromium.launch({ headless: true });  // Launch in headed mode
     const page = await browser.newPage();
     const poManager = new POManager(page);
     /* const productName = "ZARA COAT 3";
