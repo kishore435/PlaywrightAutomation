@@ -1,6 +1,6 @@
 name: Playwright Tests
 on:
-  workflow_dispatch:  # Allows manual execution with dropdown options
+  workflow_dispatch:  # Allows manual execution with dropdown
     inputs:
       test_type:
         description: "Select which tests to run"
