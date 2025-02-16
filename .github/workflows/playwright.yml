@@ -1,10 +1,10 @@
 name: Playwright Tests
 
 on:
-  push:
-    branches: [Develop]  # Automatically runs when pushing to 'develop'
-  pull_request:
-    branches: [Develop]  # Runs on PRs to 'develop'
+  #push:
+    #branches: [Develop]  # Automatically runs when pushing to 'develop'
+  #pull_request:
+    #branches: [Develop]  # Runs on PRs to 'develop'
   workflow_dispatch:  # Allows manual execution with dropdown
     inputs:
       test_type:
