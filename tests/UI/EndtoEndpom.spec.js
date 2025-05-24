@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 const { POManager } = require('../../pageobjects/POManager');
 
 
-test('Add Product to Cart Test', async ({ page }) => {
+test('kishore', async ({ page }) => {
 
     const poManager = new POManager(page);
     const productName = "ZARA COAT 3";

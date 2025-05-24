@@ -5,15 +5,15 @@ test('New API Request',async () => {
   const apiContext = await request.newContext();
 
   // Send a GET request to the API endpoint
-  const response = await apiContext.get('https://gorest.co.in/public/v2/users/6945424');
+  const response = await apiContext.get('https://reqres.in/api/users?page=2');
 
   // Check if the response is OK (status 200)
   if (response.ok()) {
     // Parse the JSON data from the response
     const responseData = await response.json();   
     
-    console.log(responseData.id);
-    console.log(responseData.name);
+    console.log(responseData.total);
+    console.log(responseData.total_pages);
     
   } else {
     console.error(`Failed to fetch API. Status: ${response.status()}`);
