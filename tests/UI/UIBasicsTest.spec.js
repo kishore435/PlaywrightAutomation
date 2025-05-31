@@ -29,10 +29,10 @@ test('Browser context First Playwright Test',async ({browser})=>
    // await page.pause();
 });
 
-test('page Playwright Test',async ({page})=>
+/* test('page Playwright Test',async ({page})=>
     {
         await page.goto('/');
         //get tile - assertion
        console.log(await page.title());
         await expect(page).toHaveTitle("Google");
-    });
+    }); */

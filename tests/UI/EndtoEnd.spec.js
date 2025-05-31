@@ -66,5 +66,5 @@ test('Add Product to Cart Test',async ({page})=>
        
        const finalOrderId = await page.locator("//small[text()='Order Id']/following-sibling::div").textContent();//fetch order ID shown in order summary page
        await expect(orderId.includes(finalOrderId)).toBeTruthy();//Verify order ID in order summary page.
-       await page.pause();
+       //await page.pause();
     });

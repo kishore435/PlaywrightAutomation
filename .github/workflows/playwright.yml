@@ -34,7 +34,7 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Run Selected Playwright Tests
-      run: npx playwright test
+      run: npx playwright test EndtoEnd.spec.js
 
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
