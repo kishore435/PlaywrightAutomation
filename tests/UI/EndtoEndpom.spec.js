@@ -8,7 +8,7 @@ test('kishore', async ({ page }) => {
     const poManager = new POManager(page);
     const productName = "ZARA COAT 3";
     const userName = "kishorekumarr105@gmail.com";
-    const password = "1028Rahul#";
+    const password = "1028kk#";
 
     const loginPage = poManager.getLoginPage();
     const dashboardPage = poManager.getDashboardPage();

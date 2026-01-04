@@ -11,7 +11,7 @@ test('Add Product to Cart Test',async ({page})=>
     
         await page.goto("https://rahulshettyacademy.com/client");
         await page.locator("#userEmail").fill(email);
-        await page.locator("#userPassword").fill("1028Rahul#");
+        await page.locator("#userPassword").fill("");
         await page.locator("#login").click();
        //await page.waitForLoadState('networkidle');
        await page.locator(".card-body b").last().waitFor();
